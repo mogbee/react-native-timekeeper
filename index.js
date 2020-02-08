@@ -315,9 +315,10 @@ export default class PercentageCircle extends React.Component<Default, TimerProp
         style={[
           styles.leftWrap,
           {
-            left: radius,
-            width: radius,
+            width: radius * 2,
             height: radius * 2,
+            overflow: 'hidden',
+            borderRadius: radius,
           },
         ]}
       >
@@ -325,7 +326,7 @@ export default class PercentageCircle extends React.Component<Default, TimerProp
           style={[
             styles.halfCircle,
             {
-              left: -radius,
+              left: 0,
               width: radius,
               height: radius * 2,
               borderRadius: radius,
