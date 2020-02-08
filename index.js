@@ -285,23 +285,18 @@ export default class PercentageCircle extends React.Component<Default, TimerProp
             },
           ]}
         >
-          {
-            (Platform.OS === 'ios')
-            ? (
-              <View style={{
-                backgroundColor: '#FFF',
-                borderColor: 'rgba(161, 26, 66, 1)',
-                borderRadius: radius / 5,
-                borderWidth: radius / 20,
-                height: radius / 5,
-                left: radius - (radius / 16),
-                top: 0 - (radius / 16),
-                width: radius / 5,
-              }}
-              />
-            )
-            : null
-          }
+          <View
+            style={{
+              backgroundColor: "#FFF",
+              borderColor: "rgba(161, 26, 66, 1)",
+              borderRadius: radius / 5,
+              borderWidth: radius / 20,
+              height: radius / 5,
+              left: radius - radius / 16,
+              top: 0 - radius / 16,
+              width: radius / 5
+            }}
+          />
         </Animated.View>
       </View>
     );
